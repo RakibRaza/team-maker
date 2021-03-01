@@ -9,23 +9,24 @@ const Squad = ({ squad, removePlayer }) => {
     <div className="squad">
       <ul className="list-group mt-5">
         <li className="list-group-item d-flex justify-content-between align-items-center">
-          Your Squad :<strong>{squad.length}</strong>
+          Your Squad :<strong>{squad.length} Player</strong>
         </li>
         <li className="list-group-item d-flex justify-content-between align-items-center">
           Total Salary :<strong>${totalSalary}</strong>
         </li>
       </ul>
       <h2 className="text-center fw-bold mt-4 squad-title">Your Squad!</h2>
-      <div className="team">
+      <div>
         {squad.map((player) => {
-          const { id, name } = player;
+          const { id, name, salary } = player;
           return (
             <div
               key={id}
               className="squad-player d-flex justify-content-between"
             >
               <h5>{name}</h5>
-              <button onClick={() => removePlayer(id)}>
+              <h5>${salary}</h5>
+              <button className="remove-btn" onClick={() => removePlayer(id)}>
                 <FaTrash />
               </button>
             </div>

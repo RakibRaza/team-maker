@@ -36,11 +36,11 @@ const Team = () => {
   return (
     <main className="container py-5">
       <section className="row ">
-        <aside className="col-lg-3 order-lg-1">
+        <aside className="col-lg-4 order-lg-1">
           <Squad removePlayer={removePlayer} squad={squad} />
         </aside>
 
-        <div className="col-lg-9">
+        <div className="col-lg-8">
           <div className="row gy-4">
             {players.map((player) => (
               <Player addPlayer={addPlayer} key={player.id} player={player} />
