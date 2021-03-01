@@ -1,9 +1,13 @@
-function App() {
+import Team from "./Components/Team/Team";
+import NavBar from "./Components/NavBar/NavBar";
+
+const App = () => {
   return (
     <>
-      <h2>Bootstrap Stater File this is your file</h2>
+      <NavBar />
+      <Team />
     </>
   );
-}
+};
 
 export default App;
